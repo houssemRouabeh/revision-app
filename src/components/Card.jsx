@@ -19,10 +19,22 @@ const Card = (props) => {
       <div style={{ marginTop: "50px", marginBottom: "50px" }}>
         {props.product.description}
       </div>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+        }}
+      >
         <div>Price: {props.product.price}</div>
         <div>Qté: {props.product.quantity}</div>
         <div>Like: {props.product.like}</div>
+        <button
+          style={{ marginTop: "15px", backgroundColor: "tomato" }}
+          onClick={() => props.delete(props.product.id)}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
