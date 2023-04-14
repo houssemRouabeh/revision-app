@@ -1,18 +1,31 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+
+const listStyle = {
+  color: "white",
+  listStyleType: "none",
+  fontSize: "24px",
+};
 const NavBar = () => {
   return (
-    <div
-      style={{ width: "100%", height: "50px", backgroundColor: "blueviolet" }}
+    <ul
+      style={{
+        width: "100%",
+        height: "50px",
+        backgroundColor: "blueviolet",
+        display: "flex",
+        gap: "50px",
+        alignItems: "center",
+      }}
     >
       <NavLink to="/">
-        <button> Product </button>
+        <li style={listStyle}> Product </li>
       </NavLink>
 
       <NavLink to="test">
-        <button>Test</button>
+        <li style={listStyle}>Test</li>
       </NavLink>
-    </div>
+    </ul>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { getallProducts } from "../services/service";
 
@@ -10,7 +10,7 @@ const Product = () => {
     });
   });
   return (
-    <div>
+    <div style={{ display: "flex", gap: "50px", margin: "50px" }}>
       {products.map((prod) => (
         <Card key={prod.id} product={prod} />
       ))}
