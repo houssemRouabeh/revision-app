@@ -18,8 +18,6 @@ const ProductForm = () => {
   };
   const handleSubmit = async () => {
     const result = await addProduct(productDetails);
-
-    console.log(result.status);
   };
   return (
     <>
@@ -55,6 +53,7 @@ const ProductForm = () => {
         <button
           onClick={() => {
             handleSubmit();
+            navigate("/");
           }}
         >
           Add
