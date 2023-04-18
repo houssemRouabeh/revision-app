@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Card = (props) => {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -31,7 +33,10 @@ const Card = (props) => {
         <div>Like: {props.product.like}</div>
         <button
           style={{ marginTop: "15px", backgroundColor: "tomato" }}
-          onClick={() => props.delete(props.product.id)}
+          onClick={() => {
+            props.delete(props.product.id);
+            navigate("/");
+          }}
         >
           Delete
         </button>

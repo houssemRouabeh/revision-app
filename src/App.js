@@ -4,6 +4,7 @@ import Product from "./components/Product";
 import Test from "./components/Test";
 import NavBar from "./components/NavBar";
 import ProductDetails from "./components/ProductDetails";
+import ProductForm from "./components/ProductForm";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Product />} />
-        <Route path="test" element={<Test />} />
+        <Route  path="/add" element={<ProductForm />} />
         <Route path=":id" element={<ProductDetails />} />
       </Routes>
     </>
