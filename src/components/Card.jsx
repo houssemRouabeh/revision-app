@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Card = (props) => {
   const navigate = useNavigate();
@@ -39,6 +39,9 @@ const Card = (props) => {
           }}
         >
           Delete
+        </button>
+        <button style={{ marginTop: "15px", backgroundColor: "green" }}>
+          <Link to={`/update/${props.product.id}`}>Edit</Link>
         </button>
       </div>
     </div>

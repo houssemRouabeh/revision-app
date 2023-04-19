@@ -22,7 +22,14 @@ const Product = () => {
   return (
     <>
       <button onClick={() => navigat("/add")}>Add Product</button>
-      <div style={{ display: "flex", gap: "50px", margin: "50px" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "50px",
+          margin: "50px",
+          flexWrap: "wrap",
+        }}
+      >
         {products}
       </div>
     </>
