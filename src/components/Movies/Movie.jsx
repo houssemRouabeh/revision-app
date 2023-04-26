@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext, useEffect } from "react";
+import { MovieContext } from "../../Routing";
 
 const Movie = () => {
-  return (
-    <div>Movie page </div>
-  )
-}
+  const user = useContext(MovieContext);
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
 
-export default Movie
+  return <div>Movie page{user.name} </div>;
+};
+
+export default Movie;
