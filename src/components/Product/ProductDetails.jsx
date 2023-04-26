@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getallProducts } from "../services/service";
+import { getallProducts, deleteProduct } from "../../services/service";
 import Card from "./Card";
-import { deleteProduct } from "../services/service";
 
 const ProductDetails = () => {
   const [productDetail, setProductDetail] = useState();
