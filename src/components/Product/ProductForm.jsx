@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { addProduct, editProduct, getallProducts } from "../services/service";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { addProduct } from "../../services/service";
+import { useNavigate } from "react-router-dom";
 
-const Update = () => {
-  const params = useParams();
+const ProductForm = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    getaProducts();
-  }, []);
-
-  const getaProducts = async () => {
-    const product = await getallProducts(params.id);
-    setProductDetails(product.data);
-  };
   const initialValues = {
-    id: params.id,
     name: "",
     price: 0,
     like: 0,
@@ -34,9 +23,8 @@ const Update = () => {
     e.preventDefault();
     const res = validate(productDetails);
     setFormErrors(res);
-
     if (Object.keys(formErrors).length === 0) {
-      const result = await editProduct(params.id, productDetails);
+      const result = await addProduct(productDetails);
       navigate("/");
     }
   };
@@ -154,4 +142,4 @@ const Update = () => {
   );
 };
 
-export default Update;
+export default ProductForm;

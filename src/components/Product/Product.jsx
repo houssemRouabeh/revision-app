@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import { getallProducts } from "../services/service";
-import { deleteProduct } from "../services/service";
+import { getallProducts, deleteProduct } from "../../services/service";
 import { useNavigate } from "react-router";
 
 const Product = () => {
