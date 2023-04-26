@@ -37,6 +37,7 @@ const Routing = () => {
           <Route path="product/*" element={<ProductRouting />} />
         )}
         <Route path="/*" element={<Error />} />
+        {/* test */}
       </Routes>
     </Suspense>
   );
